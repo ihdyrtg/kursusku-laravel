@@ -1,0 +1,33 @@
+KursusKu Project Manifest - 2026-09-22
+
+881c87cb0c00daca89f11df4902f6110dc266a45aecb8d256bb21087695af58a  ./PORTOFOLIO-CHECKLIST.md
+6a3b71a66060ef3918c7afbbef53f70a4a86276b86b92dfb4f4435a620a9363e  ./README.md
+82d28b896f134b57735d3f6e2a5c3b08b7fe697940eba3b1b7d2956a1dbe3628  ./VALIDATION-RESULTS.txt
+ec2f40d9d666570585125660d9609bc697bdc478095ea280a7a2a47f614430bb  ./assets/css/style.css
+ba4869a039b585dd95ea9475b2424b19965aaa864c3dc7928247656057bb728e  ./assets/images/hero-kursus.jpg
+f2463f26275f3b4002d8424bd804de974f1def2a88ad25dc13594d8ef0839b2f  ./assets/img/image1.png
+d33f0daf4b07bcfa9636dcd7b68fb3e0cd96663791b59648478039b866155a05  ./assets/video/intro-kursus.mp4
+08401d23ed7e9e57f0b2f9ea783d6b2e7a8717602507fcdbc03fa6ec2542dc9e  ./bitwise-test.php
+cf713551e3fb65474f38a19dea057e22f2c80c2dfd51eb5cd1950b4bc9ffe538  ./date-test.php
+fa7ed5df32ceb28943cc90b391caf7f0aec64c08e029e7e1f9d3c0eab34f47a8  ./evidence/week-02/01-desktop.png
+881af92d7f6fd43703d6ca021fab0f0983b102c3c9d8d27971553ea464b38ebc  ./evidence/week-02/02-mobile.png
+54d9094d046bda85915a33706b20c9625041502d10eed4c3a27549dcfa257c33  ./evidence/week-02/03-media.png
+af184f82e75103501ee1ddd4ce560dadf0f9b45c8cc1da3fbdfb2a4f96c55c70  ./evidence/week-02/04-view-source.png
+e5d9c83b7c130a99f9495f65c548d05f7a2e4ac6d1e1006bfc83a9ed352417af  ./evidence/week-03/kalkulator.png
+df156f89d02de37af9e3d4fec0bc2d5f24560690956b318b4b7324f929f651bb  ./evidence/week-03/source-code.png
+f5acc055e52bfdbaea89c73edc27cb2060d35f3439d990323acfbfd938e7031e  ./evidence/week-03/test-case.png
+35db0d603fd52a0b705f9f007022f8aa2ba0638c1369d85972f3ca47a5586f8a  ./evidence/week-04/katalog-6-kursus.png
+1793790195a3ff0e899655f8d0451cb282822ff112d1af76b072fb9357ede2d2  ./evidence/week-04/status-kursus.png
+994a84fcb1a948af83157f2dc7bf340b0ee62b652bce432424bc2440d7615fb9  ./evidence/week-04/test-functions.png
+1838d7df7a405cf77ffa5cae20098b745646a8270048f8f1a86c8bca064b183a  ./fee-calculator.php
+db4e97c6178bfc9a027b5b34045e26b7eb7118568f6fa90f118673e300581529  ./fee-tests.php
+1a6f5a52c2f1dd30ae0dea4c201d4ae078268efc644e8c53c2597f85ad46dd38  ./hello.php
+60343e81974bc4789f51fddc79a2b8db9a664509751a7e60e76041f7347941e7  ./helpers.php
+b719c5a4032199b1af2047d3dc6b4caca2628c9c002aeff70ce3f28c5c79df82  ./index.php
+5c2d1af53ab376536a867b979535e0c76a1978332e7d42231f928fdff9dc8bf4  ./logic-test.php
+4a233d7d2c1b8a37169f5dc164812beae35b473a45626f521e0d46d143def92d  ./operator-test.php
+a8e768be8bc32bcd10965192f1797b3d3e16d3edcb9ae94f546c9854a667f8fa  ./procedure-test.php
+99a3948b6e57736425cbccca50e733d34663513d714f56e08ad787ee3080eec2  ./server-time.php
+7f9acdcfbfdc385bbe084606187635bd119160d0d556a9b64ca6b71814a6c0e9  ./string-test.php
+754699de314d7fc7c1e860d4c7613aac0e45003be81f03df3d5dc21c06810b8b  ./test-functions.php
+b7670e72dce672eb273b9fbad521a05d8474dd95b351ce6134de904cb9ecb07d  ./type-data-test.php
