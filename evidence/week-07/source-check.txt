@@ -1,0 +1,12 @@
+PASS | routes/web.php exists
+PASS | HomeController exists
+PASS | home.blade.php exists
+PASS | public css exists
+PASS | public image exists
+PASS | named route home
+PASS | route points HomeController
+PASS | controller returns home view
+PASS | controller sends featured data
+PASS | Blade loops featured
+PASS | Blade uses route(home)
+PASS | Blade uses asset helper
