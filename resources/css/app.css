@@ -1,0 +1,111 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+    --kursusku-primary: #0f766e;
+    --kursusku-primary-dark: #115e59;
+    --kursusku-soft: #ecfdf5;
+    --kursusku-ink: #16302c;
+}
+
+body {
+    background: #f7f9f8;
+    color: var(--kursusku-ink);
+}
+
+.bg-kursusku {
+    background: linear-gradient(135deg, var(--kursusku-primary-dark), var(--kursusku-primary));
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--kursusku-primary);
+    --bs-btn-border-color: var(--kursusku-primary);
+    --bs-btn-hover-bg: var(--kursusku-primary-dark);
+    --bs-btn-hover-border-color: var(--kursusku-primary-dark);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--kursusku-primary);
+    --bs-btn-border-color: var(--kursusku-primary);
+    --bs-btn-hover-bg: var(--kursusku-primary);
+    --bs-btn-hover-border-color: var(--kursusku-primary);
+}
+
+.hero-panel {
+    background: linear-gradient(135deg, #ffffff, var(--kursusku-soft));
+    border: 1px solid #d9eee8;
+    border-radius: 1.25rem;
+    box-shadow: 0 1rem 2.5rem rgba(15, 118, 110, 0.08);
+}
+
+.hero-image {
+    min-height: 340px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.eyebrow {
+    color: var(--kursusku-primary);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.stat-card {
+    min-height: 128px;
+    background: #fff;
+    border: 1px solid #e7ecea;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1.5rem rgba(22, 48, 44, .04);
+}
+
+.stat-card span {
+    color: #64748b;
+    font-size: .9rem;
+}
+
+.stat-card strong {
+    color: var(--kursusku-primary-dark);
+    font-size: 2rem;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+.table thead th {
+    white-space: nowrap;
+    color: #475569;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+
+.detail-list dt,
+.detail-list dd {
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+    border-bottom: 1px solid #edf2f0;
+}
+
+.pagination {
+    margin-bottom: 0;
+}
+
+#ajax-status:not(:empty) {
+    padding: .35rem 0;
+}
+
+code {
+    color: #0f766e;
+}
+
+@media (max-width: 991.98px) {
+    .hero-image {
+        min-height: 240px;
+    }
+}

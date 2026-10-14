@@ -1,114 +1,67 @@
-<!doctype html>
-<html lang="id">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="KursusKu versi Laravel - Route, Controller, dan Blade.">
-    <title>KursusKu | Laravel MVC</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-</head>
-<body>
-<header class="site-header">
-    <div class="container header-inner">
-        <a class="brand" href="{{ route('home') }}" aria-label="Beranda KursusKu">
-            <span class="brand-mark" aria-hidden="true">K</span>
-            <span>
-                <strong>KursusKu</strong>
-                <small>Laravel MVC</small>
-            </span>
-        </a>
-        <span class="milestone">Milestone 7</span>
+@extends('layouts.app')
+
+@section('title', 'Beranda - KursusKu')
+
+@section('content')
+<section class="hero-panel mb-4 overflow-hidden">
+    <div class="row align-items-center g-0">
+        <div class="col-lg-7 p-4 p-lg-5">
+            <span class="eyebrow">PROJECT PEMROGRAMAN WEB III</span>
+            <h1 class="display-5 fw-bold mt-2">Kelola kursus, peserta, dan pendaftaran dalam satu aplikasi.</h1>
+            <p class="lead text-secondary mt-3">
+                KursusKu mengintegrasikan Route, Controller, Blade, Vite, Bootstrap, jQuery Ajax,
+                MySQL, Eloquent CRUD, relasi database, search, filter, dan pagination.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mt-4">
+                <a class="btn btn-primary btn-lg" href="{{ route('courses.index') }}">Lihat Course</a>
+                <a class="btn btn-outline-primary btn-lg" href="{{ route('enrollments.create') }}">Buat Enrollment</a>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <img class="w-100 hero-image" src="{{ asset('images/hero-kursus.jpg') }}" alt="Ilustrasi kegiatan belajar KursusKu">
+        </div>
     </div>
-</header>
+</section>
 
-<nav class="navbar" aria-label="Navigasi utama">
-    <div class="container nav-links">
-        <a href="{{ route('home') }}">Beranda</a>
-        <a href="#mvc">Alur MVC</a>
-        <a href="#featured">Kursus Pilihan</a>
-        <a class="nav-cta" href="#featured">Lihat Program</a>
+<section class="mb-5">
+    <div class="row g-3">
+        <div class="col-6 col-lg-3"><div class="stat-card"><span>Total Course</span><strong>{{ $stats['courses'] }}</strong></div></div>
+        <div class="col-6 col-lg-3"><div class="stat-card"><span>Course Open</span><strong>{{ $stats['open_courses'] }}</strong></div></div>
+        <div class="col-6 col-lg-3"><div class="stat-card"><span>Participant</span><strong>{{ $stats['participants'] }}</strong></div></div>
+        <div class="col-6 col-lg-3"><div class="stat-card"><span>Enrollment</span><strong>{{ $stats['enrollments'] }}</strong></div></div>
     </div>
-</nav>
+</section>
 
-<main>
-    <section class="hero">
-        <div class="container hero-content">
-            <div>
-                <span class="eyebrow">PERTEMUAN 7 · FRAMEWORK LARAVEL</span>
-                <h1>Belajar terstruktur dengan Route, Controller, dan Blade.</h1>
-                <p class="lead">
-                    Landing page KursusKu dipindahkan dari PHP biasa ke pola framework Laravel.
-                    Request masuk melalui route, data disiapkan controller, lalu Blade merender HTML.
-                </p>
-                <div class="button-row">
-                    <a class="button" href="#featured">Program Belajar Unggulan</a>
-                    <a class="button button-secondary" href="#mvc">Lihat Alur MVC</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <img class="hero-image"
-                     src="{{ asset('images/hero-kursus.jpg') }}"
-                     alt="Mahasiswa sedang mengikuti kegiatan kursus komputer">
-            </div>
+<section>
+    <div class="d-flex justify-content-between align-items-end mb-3">
+        <div>
+            <span class="eyebrow">DATA DARI ELOQUENT</span>
+            <h2 class="h3 mb-0">Course yang sedang dibuka</h2>
         </div>
-    </section>
-
-    <section id="mvc" class="mvc-strip">
-        <div class="container mvc-flow" aria-label="Alur Route Controller Blade">
-            <span>Browser GET /</span><b class="mvc-arrow">→</b>
-            <span>routes/web.php</span><b class="mvc-arrow">→</b>
-            <span>HomeController@index</span><b class="mvc-arrow">→</b>
-            <span>home.blade.php</span><b class="mvc-arrow">→</b>
-            <span>HTML Response</span>
-        </div>
-    </section>
-
-    <section id="featured" class="section section-light">
-        <div class="container">
-            <div class="section-heading">
-                <span class="eyebrow">DATA DARI CONTROLLER</span>
-                <h2>Program Belajar Unggulan</h2>
-                <p>
-    Card di bawah dirender dengan <code>&#64;foreach</code>
-    dari array <code>$featured</code> yang dikirim oleh
-    <code>HomeController</code>.
-</p>
-            </div>
-
-            <div class="feature-grid">
-                @foreach ($featured as $course)
-                    <article class="feature-card">
-                        // soal UTS live coding, tampilkan kode program di bawah nama kursus
-                        {{-- <span class="laravel-card-code">{{ $course['code'] }}</span> --}}
-                        <h3>{{ $course['name'] }}</h3>
-                        <p>{{ $course['description'] }}</p>
-                    </article>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container contact-card">
-            <div>
-                <span class="eyebrow">BATAS MILESTONE</span>
-                <h2>Fokus pada struktur framework</h2>
-                <p>Pertemuan 7 belum menambahkan database, CRUD, authentication, relasi data, atau Ajax.</p>
-            </div>
-            <div>
-                <p><strong>Route:</strong> named route <code>home</code></p>
-                <p><strong>Controller:</strong> <code>HomeController@index</code></p>
-                <p><strong>View:</strong> <code>resources/views/home.blade.php</code></p>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer class="footer">
-    <div class="container footer-inner">
-        <small>&copy; {{ date('Y') }} KursusKu · Pemrograman Web III</small>
-        <small>Laravel · MVC · Route · Controller · Blade</small>
+        <a href="{{ route('courses.index') }}" class="btn btn-sm btn-outline-secondary">Semua course</a>
     </div>
-</footer>
-</body>
-</html>
+
+    <div class="row g-3">
+        @forelse ($featured as $course)
+            <div class="col-md-6 col-xl-4">
+                <article class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between gap-2">
+                            <span class="badge text-bg-success">{{ $course->status }}</span>
+                            <span class="text-secondary small">{{ $course->code }}</span>
+                        </div>
+                        <h3 class="h5 mt-3">{{ $course->name }}</h3>
+                        <p class="text-secondary">{{ $course->description }}</p>
+                        <div class="small d-flex justify-content-between border-top pt-3">
+                            <span>Rp {{ number_format($course->fee, 0, ',', '.') }}</span>
+                            <span>{{ $course->start_date->format('d/m/Y') }}</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        @empty
+            <div class="col-12"><div class="alert alert-secondary">Belum ada course berstatus open.</div></div>
+        @endforelse
+    </div>
+</section>
+@endsection

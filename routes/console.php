@@ -1,7 +1,3 @@
 <?php
 
-use Illuminate\Support\Facades\Artisan;
-
-Artisan::command('kursusku:hello', function () {
-    $this->comment('KursusKu siap dipelajari.');
-})->purpose('Menampilkan pesan latihan KursusKu');
+// Console routes can be added here when the course reaches scheduled commands.
