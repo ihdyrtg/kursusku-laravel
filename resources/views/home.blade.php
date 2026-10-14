@@ -68,13 +68,18 @@
             <div class="section-heading">
                 <span class="eyebrow">DATA DARI CONTROLLER</span>
                 <h2>Program Belajar Unggulan</h2>
-                <p>Card di bawah dirender dengan <code>@foreach</code> dari array <code>$featured</code> yang dikirim oleh <code>HomeController</code>.</p>
+                <p>
+    Card di bawah dirender dengan <code>&#64;foreach</code>
+    dari array <code>$featured</code> yang dikirim oleh
+    <code>HomeController</code>.
+</p>
             </div>
 
             <div class="feature-grid">
                 @foreach ($featured as $course)
                     <article class="feature-card">
-                        <span class="laravel-card-code">{{ $course['code'] }}</span>
+                        // soal UTS live coding, tampilkan kode program di bawah nama kursus
+                        {{-- <span class="laravel-card-code">{{ $course['code'] }}</span> --}}
                         <h3>{{ $course['name'] }}</h3>
                         <p>{{ $course['description'] }}</p>
                     </article>

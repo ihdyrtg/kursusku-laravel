@@ -1,3 +1,4 @@
+abb71aa docs: add evidence portfolio weeks 2 through 7
 e22e399 docs: complete portfolio through meeting 7
 8e08a13 feat: preserve milestones 2-6 and source checks
 ee8611c feat: migrate KursusKu to Laravel MVC milestone 7

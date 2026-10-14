@@ -29,6 +29,12 @@ class HomeController extends Controller
                 'name' => 'UI Web Dasar',
                 'description' => 'Belajar prinsip tampilan web yang rapi.',
             ],
+            // soal Live Coding UTS
+            [
+                'code' => 'SS-01',
+                'name' => 'Security System',
+                'description' => 'Belajar keamanan sistem dan aplikasi web.',
+            ],
         ];
 
         return view('home', compact('featured'));
